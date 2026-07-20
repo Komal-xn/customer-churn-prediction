@@ -1,0 +1,30 @@
+CUSTOMER CHURN PREDICTION - RESULTS SUMMARY
+==================================================
+
+Dataset: 454 real customer records (IBM Telco Customer Churn dataset)
+Churn rate: 24.89%
+Engineered features: 27
+
+Top 5 Churn Drivers (correlation with churn):
+  - Contract: -0.405
+  - tenure: -0.374
+  - TechSupport: -0.328
+  - OnlineSecurity: -0.281
+  - TotalCharges: -0.244
+
+Model Performance:
+  - Logistic Regression: F1 = 0.618, ROC-AUC = 0.792
+  - Random Forest: F1 = 0.583, ROC-AUC = 0.819
+  - Gradient Boosting: F1 = 0.578, ROC-AUC = 0.808
+
+Best Model: Logistic Regression
+
+Customer Segments (K-Means, k=4):
+         customers  churn_rate  avg_tenure  avg_monthly_charge  avg_services
+Cluster                                                                     
+0               67         4.0       54.06               30.59          0.82
+1              128        38.0        7.30               42.47          0.64
+2              108        13.0       60.68               92.55          5.13
+3              151        31.0       22.33               82.19          2.97
+
+Highest-risk segment: Cluster 1 (38.0% churn rate)
